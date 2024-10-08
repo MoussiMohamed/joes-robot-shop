@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {IProduct} from "./product.model";
 import {CartService} from "../cart/cart.service";
 import {ProductService} from "./product.service";
@@ -9,7 +9,7 @@ import {ActivatedRoute, Router} from "@angular/router";
   templateUrl: './catalog.component.html',
   styleUrls: ['./catalog.component.css']
 })
-export class CatalogComponent {
+export class CatalogComponent implements OnInit {
   products: any;//IProduct[];
   filter: string = '';
 
